@@ -1,0 +1,14 @@
+# Secrets and local configurations
+.env*
+*.local
+*.pem
+*.key
+
+# Local build artifacts
+target/
+*.log
+
+# Scripts and docs
+*.ps1
+*.sh
+README.md

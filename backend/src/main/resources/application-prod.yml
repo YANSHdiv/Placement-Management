@@ -1,0 +1,46 @@
+server:
+  port: ${PORT:8080}
+  compression:
+    enabled: true
+  error:
+    include-stacktrace: never
+    include-message: never
+
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 2
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: never
+
+app:
+  cookie:
+    same-site: Lax
+    secure: true
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:https://*.vercel.app,https://frontend-gray-six-63.vercel.app,http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173}
+  bootstrap:
+    seed-demo-users: ${APP_SEED_DEMO_USERS:false}
+
+logging:
+  level:
+    root: INFO
+    edu.jecrc.portal: INFO

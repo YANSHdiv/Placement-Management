@@ -1,0 +1,60 @@
+server:
+  port: ${PORT:8080}
+  servlet:
+    context-path: /
+  compression:
+    enabled: true
+
+spring:
+  application:
+    name: jecrc-portal-backend
+  profiles:
+    active: dev
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: false
+    open-in-view: false
+  flyway:
+    enabled: true
+    baseline-on-migrate: false
+    locations: classpath:db/migration
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    tags-sorter: alpha
+    operations-sorter: alpha
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics
+  endpoint:
+    health:
+      show-details: when_authorized
+
+app:
+  jwt:
+    # 256-bit default development secret (must be overridden in production)
+    secret: ${JWT_SECRET:4f8b2d1a9e3c7f0b5d6e8a2c4e6f8a0b2d4e6f8a0b2d4e6f8a0b2d4e6f8a0b2d}
+    access-token-expiration-ms: ${JWT_ACCESS_EXPIRATION_MS:900000}       # 15 minutes
+    refresh-token-expiration-ms: ${JWT_REFRESH_EXPIRATION_MS:604800000}   # 7 days
+  cookie:
+    name: jecrc_refresh_token
+    domain: ${COOKIE_DOMAIN:}
+    same-site: Lax
+    secure: false # set to true in production
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173,http://localhost:3000,http://127.0.0.1:5173}
+  bootstrap:
+    admin-email: ${APP_ADMIN_EMAIL:admin@jecrcuniversity.edu.in}
+    admin-password: ${APP_ADMIN_PASSWORD:Admin@JECRC2026!}
+    seed-demo-users: ${APP_SEED_DEMO_USERS:false}
+    demo-password: ${APP_DEMO_PASSWORD:}

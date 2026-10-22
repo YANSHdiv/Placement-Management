@@ -1,0 +1,16 @@
+# Environment and secrets
+.env*
+!.env.example
+*.local
+*.pem
+*.key
+
+# Local caches
+node_modules/
+.vite/
+*.tsbuildinfo
+
+# Documentation and scripts
+README.md
+*.ps1
+*.sh

@@ -1,0 +1,28 @@
+# Environment files and credentials
+.env
+.env.*
+!.env.example
+*.local
+*.pem
+*.key
+*.p12
+
+# Dependencies and build outputs
+target/
+node_modules/
+dist/
+dist-ssr/
+*.tsbuildinfo
+
+# IDE and tool metadata
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Deployment platform caches and configs
+.vercel/
+.koyeb/
+*.log
+scratch/

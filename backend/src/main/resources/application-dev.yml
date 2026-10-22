@@ -1,0 +1,22 @@
+spring:
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5436/jecrc_portal}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 20000
+  jpa:
+    show-sql: false
+
+logging:
+  level:
+    root: INFO
+    edu.jecrc.portal: DEBUG
+    org.springframework.security: INFO
+
+app:
+  bootstrap:
+    seed-demo-users: true
+    demo-password: Password@123
