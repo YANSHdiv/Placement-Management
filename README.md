@@ -11,6 +11,26 @@
 
 ---
 
+## 🔐 Demo Credentials
+
+All test accounts share the same password for evaluation and preview testing.
+
+> **Default Password:** `Admin@JECRC2026!Demo`  
+> **Portal Login URL:** [https://frontend-gray-six-63.vercel.app/login](https://frontend-gray-six-63.vercel.app/login)
+
+| Role | Name | Email Address | Access & Scope |
+| :--- | :--- | :--- | :--- |
+| **Student** | Aarav Mehta | `student.cse@jecrcuniversity.edu.in` | View drives, submit applications, log internships, check attendance |
+| **Faculty / Mentor** | Prof. Sharma | `faculty.cse@jecrcuniversity.edu.in` | Mentor reviews, interview evaluations, student monitoring |
+| **TPO Officer / Coordinator** | Placement Officer | `tpo.officer@jecrcuniversity.edu.in` | Manage recruitment drives, schedules, and candidate rounds |
+| **TPO Admin** | TPO Head | `tpo.admin@jecrcuniversity.edu.in` | Full placement management, corporate partner records, offer decisions |
+| **Department Head (HOD)** | Head CSE | `hod.cse@jecrcuniversity.edu.in` | Department-level academic analytics, attendance approvals |
+| **University Director** | University Director | `director@jecrcuniversity.edu.in` | Institutional dashboards, high-level placement reporting |
+| **Super Administrator** | Super Administrator | `admin@jecrcuniversity.edu.in` | Global user management, RBAC configuration, audit logs, system policies |
+
+> [!NOTE]
+> All accounts use synthetic demo data aligned with JECRC University's 2025–26 academic and placement cycle.
+
 ## 1. Executive Summary & Architecture
 
 This repository houses the enterprise-grade **Integrated Academic, Training & Placement Management Portal** for **JECRC University, Jaipur**. Architected as a maintainable, high-performance **modular monolith**, the platform consolidates student academic progression, campus recruitment training (CRT), placement drive automation, and administrative governance.
