@@ -16,7 +16,7 @@
 All test accounts share the same password for evaluation and preview testing.
 
 > **Default Password:** `Admin@JECRC2026!Demo`  
-> **Portal Login URL:** [https://frontend-gray-six-63.vercel.app/login](https://frontend-gray-six-63.vercel.app/login)
+> **Portal Login URL:** [https://frontend-gray-six-63.vercel.app/login](https://frontend-gray-six-63.vercel.app)
 
 | Role | Name | Email Address | Access & Scope |
 | :--- | :--- | :--- | :--- |
