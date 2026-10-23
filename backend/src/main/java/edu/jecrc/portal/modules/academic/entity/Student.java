@@ -1,3 +1,4 @@
+//Student Entity
 package edu.jecrc.portal.modules.academic.entity;
 
 import edu.jecrc.portal.modules.user.entity.Department;
