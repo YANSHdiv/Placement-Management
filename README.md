@@ -577,4 +577,4 @@ Per project instructions to maintain a fully tested, consistent baseline without
      ]
    }
    ```
-   *Guaranteed Behavior:* Because `/api/:path*` is matched first, API requests are never routed to `/index.html`. Furthermore, all frontend API endpoints in the codebase consistently use the `/api/v1/...` prefix without hardcoded hostnames, eliminating path duplication.
+   *Guaranteed Behavior:* Because `/api/:path*` is matched first, API requests are never routed to `/index.html`. Furthermore, all frontend API endpoints in the codebase consistently use the `/api/v1/...` prefix without hardcoded hostnames, eliminating path duplication...
